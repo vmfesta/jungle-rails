@@ -36,6 +36,7 @@ puts "Re-creating Products ..."
 Product.destroy_all
 
 cat1.products.create!({
+  id: 1,
   name:  'Men\'s Classy shirt',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel1.jpg'),
@@ -44,6 +45,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
+  id: 2,
   name:  'Women\'s Zebra pants',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel2.jpg'),
@@ -52,6 +54,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
+  id: 3,
   name:  'Hipster Hat',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel3.jpg'),
@@ -60,6 +63,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
+  id: 4,
   name:  'Hipster Socks',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel4.jpg'),
@@ -68,6 +72,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
+  id: 5,
   name:  'Russian Spy Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel5.jpg'),
@@ -76,6 +81,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
+  id: 6,
   name:  'Human Feet Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel6.jpg'),
@@ -85,6 +91,7 @@ cat1.products.create!({
 
 
 cat2.products.create!({
+  id: 7,
   name:  'Modern Skateboards',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics1.jpg'),
@@ -93,6 +100,7 @@ cat2.products.create!({
 })
 
 cat2.products.create!({
+  id: 8,
   name:  'Hotdog Slicer',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics2.jpg'),
@@ -101,6 +109,7 @@ cat2.products.create!({
 })
 
 cat2.products.create!({
+  id: 9,
   name:  'World\'s Largest Smartwatch',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics3.jpg'),
@@ -109,6 +118,7 @@ cat2.products.create!({
 })
 
 cat3.products.create!({
+  id: 10,
   name:  'Optimal Sleeping Bed',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture1.jpg'),
@@ -117,6 +127,7 @@ cat3.products.create!({
 })
 
 cat3.products.create!({
+  id: 11,
   name:  'Electric Chair',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture2.jpg'),
@@ -125,6 +136,7 @@ cat3.products.create!({
 })
 
 cat3.products.create!({
+  id: 12,
   name:  'Red Bookshelf',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture3.jpg'),
@@ -132,5 +144,109 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+
+#User
+user = User.new(name:'Victor', email:'vmfesta@gmail.com', password:'123456')
+user.save
+
+
+#RATING
+
+# prod1 = Product.find(1);
+# prod2 = Product.find(2);
+# prod3 = Product.find(3);
+# prod4 = Product.find(4);
+# prod5 = Product.find(5);
+# prod6 = Product.find(6);
+# prod7 = Product.find(7);
+# prod8 = Product.find(8);
+# prod9 = Product.find(9);
+# prod10 = Product.find(10);
+# prod11 = Product.find(11);
+# prod12 = Product.find(12);
+
+Rating.create!({
+    product_id: 1,
+    user_id: 1,
+    description: 'Test description',
+    rating: 4
+})
+
+Rating.create!({
+     product_id:2,
+     user_id: 1,
+     description: 'Test description',
+     rating: 2
+})
+
+Rating.create!({
+     product_id:3,
+     user_id: 1,
+     description: 'Test description',
+     rating: 5
+})
+
+Rating.create!({
+      product_id:4,
+      user_id: 1,
+      description: 'Test description',
+      rating: 1
+})
+
+Rating.create!({
+      product_id:5,
+      user_id: 1,
+      description: 'Test description',
+      rating: 3
+})
+
+Rating.create!({
+      product_id:6,
+      user_id: 1,
+      description: 'Test description',
+      rating: 3
+})
+
+Rating.create!({
+      product_id:7,
+      user_id: 1,
+      description: 'Test description',
+      rating: 3
+})
+
+Rating.create!({
+      product_id:8,
+      user_id: 1,
+      description: 'Test description',
+      rating: 3
+})
+
+Rating.create!({
+       product_id:9,
+       user_id: 1,
+       description: 'Test description',
+       rating: 3
+})
+
+Rating.create!({
+      product_id:10,
+      user_id: 1,
+      description: 'Test description',
+      rating: 3
+})
+
+Rating.create!({
+      product_id:11,
+      user_id: 1,
+      description: 'Test description',
+      rating: 3
+})
+
+Rating.create!({
+      product_id:12,
+      user_id: 1,
+      description: 'Test description',
+      rating: 3
+})
 
 puts "DONE!"
