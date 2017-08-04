@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+
   private
 
   def cart
@@ -26,6 +27,13 @@ class ApplicationController < ActionController::Base
 
   def authorize
     redirect_to '/sessions/new' unless current_user
+  end
+
+  protected
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV['USER_AUTH'] && password == ENV['PASS']
+    end
   end
 
 end
