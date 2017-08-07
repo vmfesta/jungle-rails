@@ -37,6 +37,7 @@ gem 'stripe'
 gem 'faker'
 group :development do
   gem 'letter_opener_web'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 # Use Capistrano for deployment
